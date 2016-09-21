@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		h1 Express通过Ajax文件上传
+		h3 选择一个文件上传
+			form(enctype="multipart/form-data" method="post" )#imagelist
+				input(type="file" name="image")
+				input(type="button" value="上传文件" onclick="Req_ajax()")
+		
+		p#status
+		p#preview
+		
+	script(src='/javascripts/jquery.min.js')
+	script(src='/javascripts/upload.js')
